@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Lesson Plan Generator (Mẫu 5512)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true,
+          macros: { RR: "{\\bf R}", bold: ["{\\bf #1}", 1] }
+        },
+        options: {
+          enableMenu: false,
+          ignoreHtmlClass: 'tex2jax_ignore',
+          processHtmlClass: 'tex2jax_process'
+        },
+        chtml: { scale: 1.05, fontURL: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2' },
+        svg: { fontCache: 'global' }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.22.0",
+    "docx": "https://esm.sh/docx@8.5.0",
+    "file-saver": "https://esm.sh/file-saver@2.0.5",
+    "marked": "https://esm.sh/marked@12.0.0"
+  }
+}
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+  :root {
+    font-family: 'Roboto', sans-serif;
+  }
+  .font-times {
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .prose {
+    line-height: 1.75;
+  }
+  .mjx-chtml { font-size: 110% !important; }
+  .prose img { border-radius: 1rem; box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1); margin: 2rem auto; display: block; max-height: 450px; }
+  .prose blockquote { border-left-width: 4px; border-left-color: #6366f1; background: #f1f5f9; padding: 1.25rem; border-radius: 0.5rem; font-style: normal; }
+  .prose h1, .prose h2, .prose h3 { color: #0f172a; font-weight: 800; }
+  .prose strong { color: #4338ca; font-weight: 700; }
+  .tex2jax_process { visibility: visible !important; }
+  mjx-container[display="true"] {
+    margin: 1.5rem 0 !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.5rem 0;
+  }
+</style>
+</head>
+  <body class="bg-slate-100 tex2jax_process">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
