@@ -80,7 +80,7 @@ const App: React.FC = () => {
       </main>
       <footer className="text-center p-6 bg-white border-t border-slate-200 text-slate-500 text-sm">
         <p>
-          Tác giả: <a href="https://zalo.me/0333361363" target="_blank" rel="noopener noreferrer" className="font-medium text-indigo-600 hover:underline">Lương Đình Hùng</a> - Zalo: 0986.282.414
+          Tác giả: <a href="https://zalo.me/0986282414" target="_blank" rel="noopener noreferrer" className="font-medium text-indigo-600 hover:underline">Lương Đình Hùng</a> - Zalo: 0986.282.414
         </p>
       </footer>
       
