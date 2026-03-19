@@ -78,7 +78,7 @@ const App: React.FC = () => {
       </main>
       <footer className="text-center p-6 bg-white border-t border-slate-200 text-slate-500 text-sm">
         <p>
-          App được tạo bởi Google AI Studio - Tác giả: <span className="font-medium text-indigo-600">Lương Đình Hùng</a> - Zalo: 0986.282.414
+          App được tạo bởi Google AI Studio - Tác giả: <span className="font-medium text-indigo-600">Lương Đình Hùng<span - Zalo: 0986.282.414
         </p>
       </footer>
     </div>
