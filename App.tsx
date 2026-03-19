@@ -5,6 +5,7 @@ import { generateLessonPlan } from './services/geminiService';
 import Header from './components/Header';
 import LessonPlanForm from './components/LessonPlanForm';
 import LessonPlanDisplay from './components/LessonPlanDisplay';
+import { ConfigModal } from './components/ConfigModal';
 
 const App: React.FC = () => {
   const initialFormData: LessonPlanFormData = {
@@ -25,6 +26,7 @@ const App: React.FC = () => {
   const [generatedPlan, setGeneratedPlan] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
+  const [isConfigOpen, setIsConfigOpen] = useState<boolean>(false);
 
   const handleGeneratePlan = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
@@ -56,7 +58,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-slate-100 text-slate-800 font-sans flex flex-col">
-      <Header />
+      <Header onOpenConfig={() => setIsConfigOpen(true)} />
       <main className="container mx-auto p-4 md:p-8 flex-grow">
         <div className="flex flex-col gap-8">
           <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-200">
@@ -78,9 +80,11 @@ const App: React.FC = () => {
       </main>
       <footer className="text-center p-6 bg-white border-t border-slate-200 text-slate-500 text-sm">
         <p>
-          App được tạo bởi Google AI Studio - Tác giả: <span className="font-medium text-indigo-600">Lương Đình Hùng</span> - Zalo: 0986.282.414
+          Tác giả: <a href="https://zalo.me/0333361363" target="_blank" rel="noopener noreferrer" className="font-medium text-indigo-600 hover:underline">Lương Đình Hùng</a> - Zalo: 0986.282.414
         </p>
       </footer>
+      
+      <ConfigModal isOpen={isConfigOpen} onClose={() => setIsConfigOpen(false)} />
     </div>
   );
 };

@@ -117,7 +117,7 @@ const LessonPlanDisplay: React.FC<LessonPlanDisplayProps> = ({ plan, isLoading, 
 
         let headingLevel: any = undefined;
         let bulletLevel: number | undefined = undefined;
-        let alignment = AlignmentType.JUSTIFIED;
+        let alignment: any = AlignmentType.JUSTIFIED;
         let isBold = false;
 
         // Logic xử lý đặc biệt cho phần Header để giống mẫu 5512

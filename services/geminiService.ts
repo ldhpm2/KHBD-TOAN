@@ -105,13 +105,16 @@ ${exercisesInstruction}
 `;
 };
 
+import { getAIConfig } from './configService';
+
 export const generateLessonPlan = async (formData: LessonPlanFormData): Promise<string> => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const config = getAIConfig();
+  const ai = new GoogleGenAI({ apiKey: config.apiKey || process.env.API_KEY || '' });
   const prompt = buildPrompt(formData);
 
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-3-pro-preview',
+      model: config.model || 'gemini-3-flash-preview',
       contents: prompt,
       config: {
         thinkingConfig: { thinkingBudget: 15000 },
